@@ -55,6 +55,7 @@ func (k macOSXKeychain) Set(service, username, password string) error {
 		"-U", //update if exists
 		"-s", service,
 		"-a", username,
+		"-A",
 		"-w", password).Run()
 }
 
